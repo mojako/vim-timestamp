@@ -1,7 +1,7 @@
 " ============================================================================
 " File:         plugin/timestamp.vim
 " Author:       mojako <moja.ojj@gmail.com>
-" URL:          https://github.com/mojako/timestamp.vim
+" URL:          https://github.com/mojako/vim-timestamp
 " Last Change:  2012-06-16
 " ============================================================================
 
@@ -19,7 +19,7 @@ set cpo&vim
 augroup Timestamp
   autocmd!
   autocmd BufWritePre * if &modified && changenr() |
-                      \ call timestamp#overwrite() | endif
+                      \ call timestamp#replace() | endif
 augroup END
 
 let &cpo = s:cpo_save
